@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .card {
+        height: inherit;
+        width: inherit;
+        border: 1px solid black;
+        position: relative;
+        border-radius: 10px;
+        background-color: aliceblue;
+        opacity: 1;
+        box-shadow: 10px 10px 10px gray;
+        transition:all 0.3s;
+      }
+      .card:hover{
+        transform: scale(1.1);
+      }
+      .card img {
+        width: inherit;
+        border-radius: 10px;
+      }
+      #veg{
+        position: absolute;
+        right: 0;
+        background-color: green;
+        color: white;
+        padding: 8px;
+        border-radius: 30px;
+      }
+      .card  button{
+        padding: 10px;
+        border-radius: 20px;
+        background-color: green;
+        border: 2px solid white;
+        color: white;
+        margin: 2%;
+        font-weight: bolder;
+
+      }
+      .phone{
+        height: 320px;
+        width: 180px;
+        border: 2px solid black;
+        padding: 6px;
+       
+        border-radius:10px ;
+        background-color: black;
+        /* box-shadow: 5px 5px 5px gray; */
+      }
+      .phone > div{
+        height: inherit;
+        border-radius: inherit;
+        background-color: white;
+    width: inherit;
+        border: 2px solid black;
+
+      }
+      .notch{
+        height: 10px;
+        width: 60px;
+        border: 2px solid black;
+        border-radius: 10px;
+        margin: 2%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="phone">
+        <div>
+            <center>
+                <div class="notch"></div>
+            </center>
+              <div class="card">
+        <div id="veg">Veg</div>
+      <img
+        alt="foodImage"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2kJ2D7ESepKIY-Nw9jUrMtIvx7DeJm-qvwAMgi9d8Og&s=10"
+      />
+      <center>
+        <p><b>Paneer Sandwich</b></p>
+        <p>
+          This is a vegetable loded sandiwch with double grilled panner patty
+        </p>
+        <div><del>₹199</del>₹99</div>
+        <button>Add to cart</button>
+      </center>
+    </div>
+
+        </div>
+
+    </div>
+  
+  </body>
+</html>
