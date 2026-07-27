@@ -1,0 +1,145 @@
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* how many types of display we have in css */
+      /* inline 
+        inline bloack
+        block
+        flex
+        none 
+        grid
+        */
+      .display {
+        height: 100px;
+        width: 100px;
+        border: 2px solid black;
+        margin: 2%;
+        /* display: flex; */
+      }
+      .parent{
+        height: 100vh;
+        border: 1px solid red;
+        /* display: flex; */
+        /* flex-direction:column-reverse; */
+        /* gap: 20px; */
+        /* justify-content: space-between;
+        align-items: center */
+        /* display: flex;
+        flex-wrap: wrap; */
+        display: grid;
+        grid-template-columns: repeat(3,105px);
+        /* gap: 10px; */
+        justify-content: center;
+        
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="parent">
+      <div class="display">1</div>
+      <div class="display">2</div>
+      <div class="display">3</div>
+       <div class="display">2</div>
+      <div class="display">3</div>
+      
+    </div>
+  </body>
+</html> -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .phone {
+        position: relative;
+        height: 400px;
+        width: 200px;
+        border: 2px solid black;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      #notch {
+        height: 15px;
+        width: 50px;
+        border-radius: 50px;
+        border: 2px solid black;
+        position: absolute;
+        top: 0;
+      }
+      .card {
+        width: calc(100% - 20px);
+        border: 1px solid black;
+        position: relative;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: aliceblue;
+      }
+      .card img {
+        width: 100%;
+      }
+      #badge {
+        position: absolute;
+        right: 10px;
+        background-color: red;
+        color: white;
+        padding: 10px;
+        border-radius: 50%;
+      }
+      .card > input {
+        background-color: green;
+        padding: 5px;
+        font-size: larger;
+        font-weight: bolder;
+        color: aliceblue;
+      }
+      .buttons {
+        position: absolute;
+        bottom: 0;
+        height: max-content;
+        /* border: 2px solid black; */
+        display: flex;
+        width: inherit;
+        padding: 10px;
+        justify-content: space-between;
+        border-top: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <div class="phone">
+        <div id="notch"></div>
+        <div class="card">
+          <div id="badge"></div>
+          <img
+            alt="foodImage"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2kJ2D7ESepKIY-Nw9jUrMtIvx7DeJm-qvwAMgi9d8Og&s=10"
+          />
+          <b> <div>sandwich</div></b>
+          <div>fully loded chess and panner sandwich</div>
+          <div><del>₹199</del>₹99</div>
+          <input type="button" value="Add" />
+        </div>
+        <div class="buttons">
+          <div><</div>
+          <div>0</div>
+          <div>=</div>
+        </div>
+      </div>
+    </center>
+  </body>
+</html>
