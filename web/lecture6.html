@@ -50,10 +50,11 @@
       .loading {
         height: 20px;
         width: 20px;
-        border: 5px solid gray;
+        border: 3px solid white;
         border-top-color: black;
+        border-right-color: black;
         border-radius: 50%;
-        animation: loader 2s infinite linear;
+        animation: loader 1s infinite linear;
       }
       @keyframes loader {
         from {
@@ -100,15 +101,15 @@
       #video {
         height: 50%;
         width: 350px;
-       
+
         background-color: gray;
       }
       #profile {
         height: 30px;
         width: 30px;
         border-radius: 50%;
-       
-         background-color: gray;
+
+        background-color: gray;
       }
       #title {
         height: 20px;
@@ -120,163 +121,265 @@
       #description {
         height: 20px;
         width: 50%;
-margin: 2%;
+        margin: 2%;
         background-color: gray;
       }
-      .xyz{
+      .xyz {
         display: flex;
         flex-direction: column;
         width: 80%;
       }
-      .detailes{
+      .detailes {
         margin: 2%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
       }
       @keyframes fade {
-        from{
-            opacity: 0.3;
+        from {
+          opacity: 0.3;
         }
-        to{
-            opacity: 1;
+        to {
+          opacity: 1;
         }
-
-        
       }
-      .container{
+      .container {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
+      }
+      header {
+        padding: 10px;
+        width: 100vw;
+        background-color: black;
+        display: flex;
+        color: aliceblue;
+        justify-content: space-evenly;
+        font-size: larger;
+        align-items: center;
+      }
+      header input {
+        border-radius: 20px;
+        width: 60%;
+        height: 30px;
+        padding: 5px;
+      }
+      #search {
+        height: 60%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      .CNPContainer {
+        display: flex;
+        gap: 15px;
+      }
+      #Create {
+        border: 1px solid gray;
+        border-radius: 20px;
+        padding: 5px;
+      }
+      #microphone {
+        color: aliceblue;
+        padding: 2px;
+        border: 1px solid gray;
+        background-color: gray;
+        border-radius: 50%;
+      }
+      #notification{
+        font-size: larger;
+      }
+      #Profile{
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: gray;
       }
     </style>
   </head>
   <body>
-   
+    <header>
+      <div>Premium</div>
+      <div id="search" >
+        <input type="search" placeholder="Search..."/>
+        <div id="microphone">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            width="24"
+            viewBox="0 0 24 24"
+            fill="white"
+            focusable="false"
+            aria-hidden="true"
+            style="
+              pointer-events: none;
+              display: inherit;
+              width: 100%;
+              height: 100%;
+            "
+          >
+            <path
+              d="M18.063 14.5a1 1 0 111.73 1A8.998 8.998 0 0113 19.942V22a1 1 0 11-2 0v-2.058A8.999 8.999 0 014.206 15.5l.866-.5.865-.5a7.002 7.002 0 0012.125 0ZM12 1a5 5 0 015 5v5a5 5 0 01-10 0V6a5 5 0 015-5ZM4.572 14.134a1 1 0 011.365.366l-1.731 1a1 1 0 01.366-1.366ZM12 3a3 3 0 00-3 3v5a3 3 0 106 0V6a3 3 0 00-3-3Z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+
+      <div class="CNPContainer">
+        <div id="Create">+ Create</div>
+        <div id="Notification">
+          <div id="notification">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="34"
+              height="34"
+              viewBox="0 0 24 24"
+              fill="white"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 22a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2zm6-6V11a6 6 0 1 0-12 0v5L4 18v1h16v-1l-2-2zm-2 1H8v-6a4 4 0 1 1 8 0v6z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div id="Profile"></div>
+      </div>
+    </header>
     <div class="container">
-        <div class="skeleton">
-      <div id="video"></div>
-      <div class="detailes">
-        <div id="profile"></div>
-        <div class="xyz">
-          <div id="title"></div>
-          <div id="description"></div>
+      <div class="skeleton">
+        <div id="video"></div>
+        <div class="detailes">
+          <div id="profile"></div>
+          <div class="xyz">
+            <div id="title"></div>
+            <div id="description"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skeleton">
+        <div id="video"></div>
+        <div class="detailes">
+          <div id="profile"></div>
+          <div class="xyz">
+            <div id="title"></div>
+            <div id="description"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skeleton">
+        <div id="video"></div>
+        <div class="detailes">
+          <div id="profile"></div>
+          <div class="xyz">
+            <div id="title"></div>
+            <div id="description"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skeleton">
+        <div id="video"></div>
+        <div class="detailes">
+          <div id="profile"></div>
+          <div class="xyz">
+            <div id="title"></div>
+            <div id="description"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skeleton">
+        <div id="video"></div>
+        <div class="detailes">
+          <div id="profile"></div>
+          <div class="xyz">
+            <div id="title"></div>
+            <div id="description"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skeleton">
+        <div id="video"></div>
+        <div class="detailes">
+          <div id="profile"></div>
+          <div class="xyz">
+            <div id="title"></div>
+            <div id="description"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skeleton">
+        <div id="video"></div>
+        <div class="detailes">
+          <div id="profile"></div>
+          <div class="xyz">
+            <div id="title"></div>
+            <div id="description"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skeleton">
+        <div id="video"></div>
+        <div class="detailes">
+          <div id="profile"></div>
+          <div class="xyz">
+            <div id="title"></div>
+            <div id="description"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skeleton">
+        <div id="video"></div>
+        <div class="detailes">
+          <div id="profile"></div>
+          <div class="xyz">
+            <div id="title"></div>
+            <div id="description"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skeleton">
+        <div id="video"></div>
+        <div class="detailes">
+          <div id="profile"></div>
+          <div class="xyz">
+            <div id="title"></div>
+            <div id="description"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skeleton">
+        <div id="video"></div>
+        <div class="detailes">
+          <div id="profile"></div>
+          <div class="xyz">
+            <div id="title"></div>
+            <div id="description"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skeleton">
+        <div id="video"></div>
+        <div class="detailes">
+          <div id="profile"></div>
+          <div class="xyz">
+            <div id="title"></div>
+            <div id="description"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skeleton">
+        <div id="video"></div>
+        <div class="detailes">
+          <div id="profile"></div>
+          <div class="xyz">
+            <div id="title"></div>
+            <div id="description"></div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="skeleton">
-      <div id="video"></div>
-      <div class="detailes">
-        <div id="profile"></div>
-        <div class="xyz">
-          <div id="title"></div>
-          <div id="description"></div>
-        </div>
-      </div>
-    </div>
-    <div class="skeleton">
-      <div id="video"></div>
-      <div class="detailes">
-        <div id="profile"></div>
-        <div class="xyz">
-          <div id="title"></div>
-          <div id="description"></div>
-        </div>
-      </div>
-    </div>
-     <div class="skeleton">
-      <div id="video"></div>
-      <div class="detailes">
-        <div id="profile"></div>
-        <div class="xyz">
-          <div id="title"></div>
-          <div id="description"></div>
-        </div>
-      </div>
-    </div> <div class="skeleton">
-      <div id="video"></div>
-      <div class="detailes">
-        <div id="profile"></div>
-        <div class="xyz">
-          <div id="title"></div>
-          <div id="description"></div>
-        </div>
-      </div>
-    </div> <div class="skeleton">
-      <div id="video"></div>
-      <div class="detailes">
-        <div id="profile"></div>
-        <div class="xyz">
-          <div id="title"></div>
-          <div id="description"></div>
-        </div>
-      </div>
-    </div> <div class="skeleton">
-      <div id="video"></div>
-      <div class="detailes">
-        <div id="profile"></div>
-        <div class="xyz">
-          <div id="title"></div>
-          <div id="description"></div>
-        </div>
-      </div>
-    </div> <div class="skeleton">
-      <div id="video"></div>
-      <div class="detailes">
-        <div id="profile"></div>
-        <div class="xyz">
-          <div id="title"></div>
-          <div id="description"></div>
-        </div>
-      </div>
-    </div> <div class="skeleton">
-      <div id="video"></div>
-      <div class="detailes">
-        <div id="profile"></div>
-        <div class="xyz">
-          <div id="title"></div>
-          <div id="description"></div>
-        </div>
-      </div>
-    </div> <div class="skeleton">
-      <div id="video"></div>
-      <div class="detailes">
-        <div id="profile"></div>
-        <div class="xyz">
-          <div id="title"></div>
-          <div id="description"></div>
-        </div>
-      </div>
-    </div> <div class="skeleton">
-      <div id="video"></div>
-      <div class="detailes">
-        <div id="profile"></div>
-        <div class="xyz">
-          <div id="title"></div>
-          <div id="description"></div>
-        </div>
-      </div>
-    </div> <div class="skeleton">
-      <div id="video"></div>
-      <div class="detailes">
-        <div id="profile"></div>
-        <div class="xyz">
-          <div id="title"></div>
-          <div id="description"></div>
-        </div>
-      </div>
-    </div> <div class="skeleton">
-      <div id="video"></div>
-      <div class="detailes">
-        <div id="profile"></div>
-        <div class="xyz">
-          <div id="title"></div>
-          <div id="description"></div>
-        </div>
-      </div>
-    </div>
-    </div>
-     <div class="lineborder"></div>
-    <!-- <div class="loading"></div> -->
+    <div class="lineborder"></div>
+    <center><div class="loading"></div></center>
     <!-- <div class="animate"></div> -->
     <!-- <div class="animate"></div> -->
   </body>
