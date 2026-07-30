@@ -95,10 +95,11 @@
         /* border: 2px solid black; */
         margin: 10%;
         padding: 10px;
-        animation: fade 3s infinite ease-in-out alternate;
+        /* animation: fade 3s infinite ease-in-out alternate; */
         transition: all 0.5s;
       }
       #video {
+        position: relative;
         height: 50%;
         width: 350px;
 
@@ -149,7 +150,7 @@
       }
       header {
         padding: 10px;
-        width: 100vw;
+        width: auto;
         background-color: black;
         display: flex;
         color: aliceblue;
@@ -194,6 +195,25 @@
         width: 40px;
         border-radius: 50%;
         background-color: gray;
+      }
+      #shimmer{
+        position: absolute;
+        height: 100%;
+        width: 50px;
+        background-color: whitesmoke;
+        opacity: 0.2;
+        box-shadow: 10px 25px 25px 25px whitesmoke;
+        animation: shimming 2s infinite ease-in-out;
+      }
+      @keyframes shimming {
+        from{
+            transform: translatex(0px);
+
+        }to{
+            transform: translateX(350px);
+
+        }
+        
       }
     </style>
   </head>
@@ -248,7 +268,11 @@
     </header>
     <div class="container">
       <div class="skeleton">
-        <div id="video"></div>
+        
+        <div id="video">
+              
+            <div id="shimmer"></div>
+        </div>
         <div class="detailes">
           <div id="profile"></div>
           <div class="xyz">
@@ -258,7 +282,9 @@
         </div>
       </div>
       <div class="skeleton">
-        <div id="video"></div>
+        <div id="video">
+               <div id="shimmer"></div>
+        </div>
         <div class="detailes">
           <div id="profile"></div>
           <div class="xyz">
@@ -268,7 +294,9 @@
         </div>
       </div>
       <div class="skeleton">
-        <div id="video"></div>
+        <div id="video">
+               <div id="shimmer"></div>
+        </div>
         <div class="detailes">
           <div id="profile"></div>
           <div class="xyz">
@@ -278,7 +306,9 @@
         </div>
       </div>
       <div class="skeleton">
-        <div id="video"></div>
+        <div id="video">
+               <div id="shimmer"></div>
+        </div>
         <div class="detailes">
           <div id="profile"></div>
           <div class="xyz">
@@ -288,7 +318,9 @@
         </div>
       </div>
       <div class="skeleton">
-        <div id="video"></div>
+        <div id="video">
+               <div id="shimmer"></div>
+        </div>
         <div class="detailes">
           <div id="profile"></div>
           <div class="xyz">
@@ -298,7 +330,9 @@
         </div>
       </div>
       <div class="skeleton">
-        <div id="video"></div>
+        <div id="video">
+               <div id="shimmer"></div>
+        </div>
         <div class="detailes">
           <div id="profile"></div>
           <div class="xyz">
@@ -308,7 +342,9 @@
         </div>
       </div>
       <div class="skeleton">
-        <div id="video"></div>
+        <div id="video">
+               <div id="shimmer"></div>
+        </div>
         <div class="detailes">
           <div id="profile"></div>
           <div class="xyz">
@@ -318,7 +354,9 @@
         </div>
       </div>
       <div class="skeleton">
-        <div id="video"></div>
+        <div id="video">
+               <div id="shimmer"></div>
+        </div>
         <div class="detailes">
           <div id="profile"></div>
           <div class="xyz">
@@ -328,7 +366,9 @@
         </div>
       </div>
       <div class="skeleton">
-        <div id="video"></div>
+        <div id="video">
+               <div id="shimmer"></div>
+        </div>
         <div class="detailes">
           <div id="profile"></div>
           <div class="xyz">
@@ -338,7 +378,9 @@
         </div>
       </div>
       <div class="skeleton">
-        <div id="video"></div>
+        <div id="video">
+               <div id="shimmer"></div>
+        </div>
         <div class="detailes">
           <div id="profile"></div>
           <div class="xyz">
@@ -348,7 +390,9 @@
         </div>
       </div>
       <div class="skeleton">
-        <div id="video"></div>
+        <div id="video">
+               <div id="shimmer"></div>
+        </div>
         <div class="detailes">
           <div id="profile"></div>
           <div class="xyz">
@@ -358,7 +402,9 @@
         </div>
       </div>
       <div class="skeleton">
-        <div id="video"></div>
+        <div id="video">
+               <div id="shimmer"></div>
+        </div>
         <div class="detailes">
           <div id="profile"></div>
           <div class="xyz">
@@ -368,7 +414,9 @@
         </div>
       </div>
       <div class="skeleton">
-        <div id="video"></div>
+        <div id="video">
+               <div id="shimmer"></div>
+        </div>
         <div class="detailes">
           <div id="profile"></div>
           <div class="xyz">
