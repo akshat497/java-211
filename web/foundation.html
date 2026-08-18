@@ -38,20 +38,67 @@
         height: 100vh;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
-   
+     #loader{
+        height: 40px;
+        width: 40px;
+        border: 8px solid black;
+        border-top-color: white;
+        border-right-color: white;
+        
+        border-radius:50% ;
+        animation: loading 1s infinite ease-in-out;
+     }
+     @keyframes loading {
+        from    {
+            transform: rotate(0deg);
+
+        }
+         to    {
+            transform: rotate(360deg);
+        }
+        
+     }
+     #ytLoader{
+        border-top: 3px solid red;
+        animation: ytloading 2s infinite ease-in-out;
+        
+     }
+     @keyframes ytloading {
+         from    {
+            width: 10px;
+
+        }
+         to    {
+            width: 100vw;
+        }
+        
+     }
+     *{
+        margin: 0;
+     }
     </style>
 </head>
 <body>
-    <div id="parent">
-        <div id="loader"></div>
+    <div id="ytLoader"></div>
+    <div id="container">
+        <div id="">
+
+        </div>
+
+    </div>
+    <!-- <div id="parent"> -->
+        <!-- <div id="loader">
+
+        </div> -->
         <!-- <div id="box">
 
     </div>
      <div id="box">
 
     </div> -->
-</div>
+<!-- </div> -->
 <!-- 
     <center>
         <div id="box">
