@@ -4,8 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>web page</title>
+    <style>
+      /* //selectors */
+      /* tag selector 
+      group selector
+      class 
+      id
+      child
+      decendant */
+      /* p, h1,img,table,div{
+        color: red;
+        background-color: yellow;
+      } */
+      .container {
+        height: 10px;
+        margin: 10px;
+        border: 2px solid black;
+        color: red;
+        background-color: yellow;
+      }
+      #one {
+       width: 100px;
+      }
+      #two {
+        width: 200px;
+      }
+      #three {
+        width: 300px;
+      }
+      #four {
+        width: 400px;
+      }
+      #five {
+        width: 500px;
+          padding:4px;
+      }
+      #five > div {
+        width: 100px;
+        height: inherit;
+      
+        background-color: blue;
+      }
+      #five div{
+        background-color: aliceblue;
+        border: 1px solid black;
+        padding: 2px;
+      }
+    </style>
   </head>
   <body>
+    <div class="container" id="one"></div>
+    <div class="container" id="two"></div>
+    <div class="container" id="three"></div>
+    <div class="container" id="four"></div>
+    <div class="container" id="five">
+      <div>
+        <div></div>
+      </div>
+    </div>
+    <div>
+      
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
     <!-- container tags are those tags which are used to contain other tags and elements.
      The container tags are used to group the elements together and apply styles to them. 
      The container tags are also used to create a layout for the web page. 
@@ -22,7 +85,7 @@
     <!-- example of sementic tags are <header>, <footer>, <article>, <section>, <nav>, <aside>, <main>, <figure>, <figcaption>, <mark>, <time>, <progress>, <meter>, <details>, <summary>, <dialog>, <menu>, <menuitem> etc. -->
     <!-- non-sementic tags are those tags which are used to define the content without any meaning. -->
     <!-- example of non-sementic tags are <div>, <span>, <b>, <i>, <u>, <strong>, <em>, <small>, <big>,  -->
-
+<!-- /Users/akshatsaini/Documents/Zoom/2026-08-18 13.47.00 AKSHAT SAINI's Zoom Meeting/lecture1.mp4.zip -->
     <!-- <main>
       <header>
         <div>Banner</div>
@@ -93,7 +156,7 @@
     <h4>Heading 4</h4>
     <h5>Heading 5</h5>
     <h6>Heading 6</h6>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56063.650203983576!2d77.2210688!3d28.5704192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce31ce8460ba7%3A0xb9f1ba2d3bdfa80d!2sHumayun%E2%80%99s%20Tomb!5e0!3m2!1sen!2sin!4v1787043131556!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56063.650203983576!2d77.2210688!3d28.5704192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce31ce8460ba7%3A0xb9f1ba2d3bdfa80d!2sHumayun%E2%80%99s%20Tomb!5e0!3m2!1sen!2sin!4v1787043131556!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
     <video width="320" height="240" controls>
         <source src="movie.mp4" type="video/mp4">
       </video>
@@ -101,7 +164,12 @@
         <source src="audio.mp3" type="audio/mpeg">
         <source src="audio.ogg" type="audio/ogg">
         Your browser does not support the audio element.
-      </audio>
+      </audio> -->
+      <div>
+          <p style="color: blue;">This is a simple div element Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est blanditiis aliquid impedit cum repellendus ut accusantium harum illum corrupti. Sit tempora nulla impedit est quam quibusdam dolorem dignissimos nam quod.</p>
+      
+        <p>This is a simple div element Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est blanditiis aliquid impedit cum repellendus ut accusantium harum illum corrupti. Sit tempora nulla impedit est quam quibusdam dolorem dignissimos nam quod.</p>
+      </div>
 </body>
 </body>
 </html>
