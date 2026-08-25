@@ -1,10 +1,4 @@
-.box {
-  height: 100px;
-  width: 100px;
-  background-color: red;
-  border: 1px solid black;
-  margin: 10px;
-}
+
 #static {
     position:sticky;
     top: 0;
@@ -49,8 +43,127 @@
     background-color:blue;
     margin:1px;
 }
-.box{
+/* .box{
     display:flex;
     align-items:center;
     justify-content:space-around;
-}
+} */
+
+/* .box{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  justify-content:end;
+  align-items:center;
+} */
+ .box{
+  height: 110px;
+  width: 100px;
+  background-color: red;
+  border: 1px solid black;
+  margin: 10px;
+  display:grid;
+  visibility:visible;
+  grid-template-columns:20px 20px ;
+  gap:10px;
+  justify-content:space-between;
+  align-items:center;
+ }
+ .box1{
+  height: 110px;
+  width: 100px;
+  background-color: red;
+  border: 1px solid black;
+  margin: 10px;
+  display:grid;
+  grid-template-columns:20px 20px ;
+  gap:10px;
+  justify-content:space-between;
+  align-items:center;
+ }
+
+ input[name="input"]{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  /* background-color: white; */
+  color:white;
+  border:none;
+  
+  
+ }
+ input[name="input"]:focus{
+  outline: 1px solid purple;
+  box-shadow: 0 0 5px 5px purple;
+ 
+  
+ }
+ input[name="input1"]:disabled{
+  background-color: gray;
+  color: white;
+  border:none;
+ cursor: not-allowed;
+ }
+
+ button:active{
+  background-color: purple;
+  color:white;
+  border:none;
+  box-shadow: 0 0 5px 5px purple;
+ }
+  button:hover{
+    transform: translateY(-200px);
+  }
+  input[type="checkbox"]:checked{
+    background-color: purple;
+    accent-color: purple;
+    transform: scale(1.5);
+  }
+  p::before{
+    content: "* ";
+    color: purple;
+  }
+  td:hover::after{
+    content: "-->";
+    color: purple;
+  }
+   td:hover::before{
+    content: "<--";
+    color: purple;
+  }
+  td::marker{
+    color: purple;
+  }
+  /* .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+} */
+
+/* .checkbox input {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #999;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s;
+} */
+
+/* Checked state */
+/* .checkbox input:checked {
+  background-color: purple;
+  border-color: purple;
+} */
+
+/* Tick mark */
+/* .checkbox input:checked::after {
+  content: "✓";
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  left: 3px;
+  top: -1px;
+} */
