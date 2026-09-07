@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 10;
+
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: slide 7s infinite linear; ;
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+        }
+        #train{
+            width: 100vw;
+            height: 100px;
+            background-color: aliceblue;
+            display: flex;
+            gap: 10px;
+            border-bottom: 20px solid brown                  ;
+            
+        
+        }
+        @keyframes slide {
+            from{
+                transform: translateX(-80vw) ;
+
+            }
+            to{
+                transform: translateX(100vw) ;
+            }
+            
+        }
+        .wheel1{
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            position: absolute;
+            bottom: 0px;
+            bottom: -10px;
+            animation: rotate 0.1s infinite linear ;
+            
+            
+        }
+        .wheel2{
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            position: absolute;
+            bottom: -10px;
+            right: 0px;
+            animation: rotate 0.1s infinite linear;
+
+                     
+        }
+        .alloy{
+            height: 20px;
+            width: 20px;
+            border:2px solid white;
+            border-top:none;
+             border-left:none
+            
+        }
+        .engine{
+          
+            border-top-right-radius: 50px;
+
+        }
+        @keyframes rotate {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="train">
+        <div id="box">
+            <div class="wheel1">
+                <div class="alloy"></div>
+            </div>
+            <div class="wheel2">
+                <div class="alloy"></div>
+            </div>
+
+        </div>
+         <div id="box">
+            <div class="wheel1"><div class="alloy"></div></div>
+            <div class="wheel2"><div class="alloy"></div></div>
+
+        </div>
+         <div id="box">
+            <div class="wheel1"><div class="alloy"></div></div>
+            <div class="wheel2"><div class="alloy"></div></div>
+
+        </div>
+          <div id="box" class="engine">
+            <div class="wheel1"><div class="alloy"></div></div>
+            <div class="wheel2"><div class="alloy"></div></div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .stairs {
+        border-left: 10px solid brown;
+        border-top: 10px solid brown;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        bottom: 0;
+        animation: step 7s 1 steps(7);
+        opacity: 0;
+      }
+      @keyframes step {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 1;
+        }
+        
+      }
+      .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        border: 3px solid black;
+      }
+      #stairs1 {
+        left: 0;
+        animation-delay: 0s;
+      }
+      #stairs2 {
+        left: 50px;
+        bottom: 50px;
+        animation-delay: 1s;
+      }
+      #stairs3 {
+        left: 100px;
+        bottom: 100px;
+        animation-delay: 2s;
+      }
+      #stairs4 {
+        left: 150px;
+        bottom: 150px;
+        animation-delay: 3s;
+      }
+      #stairs5 {
+        left: 200px;
+        bottom: 200px;
+        animation-delay: 4s;
+      }
+      #stairs6 {
+        left: 250px;
+        bottom: 250px;
+        animation-delay: 5s;
+      }
+      #stairs7 {
+        left: 300px;
+        bottom: 300px;
+        animation-delay: 6s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="stairs" id="stairs1"></div>
+      <div class="stairs" id="stairs2"></div>
+      <div class="stairs" id="stairs3"></div>
+      <div class="stairs" id="stairs4"></div>
+      <div class="stairs" id="stairs5"></div>
+      <div class="stairs" id="stairs6"></div>
+      <div class="stairs" id="stairs7"></div>
+    </div>
+  </body>
+</html>
