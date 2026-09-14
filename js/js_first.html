@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("Hello, World!");
+
+      //.   0. 1. 2. 3. 4  5
+      //  name="a. k. s. h. a. t";
+
+      // console.log(name[6])
+      let userSubscription = null;
+      console.log(userSubscription);
+      //.    0.       1.       2.        3.    4.   5.    6                    7
+      arr = [
+        "free",
+        "pro",
+        "premium",
+        23000,
+        23.45,
+        true,
+        ["a", "b", "c"],
+        { name: "akshat", age: 23, isLoggedIn: true },
+      ];
+      obj = {
+        //key.   values
+        name: "akshat",
+        age: 23,
+        isLoggedIn: true,
+        lastLogin: ["2023-01-01", "2023-01-02"],
+      };
+      console.log(obj.lastLogin[0]);
+
+      console.log(5 == "1");
+      console.log(false || false || false);
+      student = {
+        name: "abhay",
+        age: 36,
+        books_issued: [
+          {
+            name: "harrypotter",
+            date: {
+              issued_date: null,
+              return_date: null,
+            },
+          },
+          {
+            name: "chacha chaudhary",
+            date: {
+              issued_date: "2023-01-01",
+              return_date: null,
+            },
+          },
+        ],
+      };
+      console.log(student.books_issued[1].date.issued_date);
+      //arthematic operators are
+      // +,-,*,/,%,++,--
+      //comparison operators are
+      // ==,===,!=,!==,>,<,>=,<=
+      //logical operators are
+      // &&,||,!
+      //assignment operators are
+      // =,+=,-=,*=,/=,%=
+      //ternary operator is
+      // condition ? true : false
+      //ternary operator is used to check a condition and return a value based on that condition
+      //condition flow statements are
+      //if,if else,if else if,else,switch
+      age = 19;
+      //.       true/(false)
+      //.   true.     true
+      if (age >= 13&& age<=19) {
+        console.log("teenage");
+      } else if(age>=20&&age<=40){
+        console.log("adult");
+      } else if(age>40){
+        console.log("old");
+      } else{
+        console.log("child");
+      }
+
+      //switch statement is used to check a condition and return a value based on that condition
+    //  day=3;
+    //  switch(day){
+    //   case 1:
+    //     console.log("Monday");
+    //     break;
+    //   case 2:
+    //     console.log("Tuesday");
+    //     break;
+    //   case 3:
+    //     console.log("Wednesday");
+    //     break;
+    //   case 4:
+    //     console.log("Thursday");
+    //     break;
+    //   case 5:
+    //     console.log("Friday");
+    //     break;
+    //   case 6:
+    //     console.log("Saturday");
+    //     break;
+    //   case 7:
+    //     console.log("Sunday");
+    //     break;
+    //   default:
+    //     console.log("Invalid day");
+
+    //  }
+
+    value="/";
+
+    // switch(value){
+    //   case "+":
+    //     console.log("Addition");
+    //     break;
+    //   case "-":
+    //     console.log("Subtraction");
+    //     break;
+    //   case "*":
+    //     console.log("Multiplication");
+    //     break;
+    //   case "/":
+    //     console.log("Division");
+    //     break;
+    //   default:
+    //     console.log("Invalid operator");
+    // }
+
+    //function is a blcok of code that can be reused multiple times
+
+
+    function greet(){
+
+      console.log("Hello, World!");
+
+    }
+      //interperator reads the code from top to bottom and left to right and line by line if it finds any error in hte line it will stop there and ask yo to fix it 
+      // and then it will continue to read the code
+
+      //  age>=18 ? console.log("You can vote") : console.log("You cannot vote");
+    </script>
+  </body>
+</html>

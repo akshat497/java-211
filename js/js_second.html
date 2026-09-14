@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function greet(){
+      //     console.log("Hello, World!");
+      // }
+
+      // greet();
+      // greet();
+      // greet();
+      // greet();
+      // greet();
+      //.        parameters
+
+      // function addition(a, b){
+      //    return a+b
+      // }
+      // value=addition(2, 3)
+
+      // if(value>5){
+      //     console.log("out of budget")
+      // }else{
+      //      console.log("In budget")
+
+      // }
+
+      //hod higher order functions are those functions which takes functions as argument and return function
+
+      function add(a, b) {
+        return a + b;
+      }
+
+      function test(a, b, fun) {
+        console.log(a, b, fun);
+
+        return fun(a, b);
+      }
+
+      console.log(test(10, 20, add));
+
+
+      function outer(){
+        name="akshat";
+
+        function inner(){
+            console.log("inner ",name)
+        }
+        inner()
+
+      }
+
+      outer()
+
+
+    //   /filter
+    //   /Map
+    //   /foreach 
+    //   /sort 
+    //   /reduce 
+    //   /find 
+      
+
+    </script>
+  </body>
+</html>
