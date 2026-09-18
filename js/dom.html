@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 100px;
+        width: 100px;
+        border: 2px solid black;
+      }
+      div{
+        display: flex;
+        flex-direction: column;
+        padding: 1%;
+        gap: 10px;
+        background-color: rgb(201, 196, 196);
+        border-radius: 20px;
+        
+      }
+    </style>
+  </head>
+  <body>
+
+    <div >
+       Name:-<input type="text" placeholder="enter a name" id="name"/>
+       Email:- <input type="text" placeholder="enter a email" id="email"/>
+       Phone:- <input type="text" placeholder="enter a phone number"id="phone"/>
+       Age:-<input type="text" placeholder="enter age" id="age"/>
+      <button onclick="addData()">Submit</button>
+    </div>
+    <table border>
+        <thead>
+            <tr>
+                <th>Name</th>
+                 <th>Email</th>
+                  <th>Phone</th>
+                   <th>Age</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            
+        </tbody>
+    </table>
+    <script>
+    //   function createBox() {
+    //     let box = document.createElement("div");
+    //     console.log(box);
+    //     box.className = "box";
+    //     document.body.append(box);
+    //   }
+    //   let button = document.createElement("button");
+    //   button.innerText="create new box"
+    //   button.addEventListener("click", function(){
+    //     createBox();
+    //   });
+    //   document.body.append(button);
+    var tbody=document.getElementById("tbody");
+    var Username=document.getElementById('name')
+    var Useremail=document.getElementById('email')
+    var Userphone=document.getElementById('phone')
+    var Userage=document.getElementById('age')
+
+    function addData(){
+        var tableRow=document.createElement("tr")
+        var name=document.createElement('td')
+        var email=document.createElement('td')
+        var phone=document.createElement('td')
+        var age=document.createElement('td')
+        name.innerText=Username.value;
+        phone.innerText=Userphone.value;
+        email.innerText=Useremail.value;
+        age.innerText=Userage.value;
+        tableRow.append(name,email,phone,age)
+        tbody.append(tableRow)
+        
+    }
+
+
+    </script>
+  </body>
+</html>

@@ -45,18 +45,49 @@
     //     }
     //     console.log("");
     //   }
-    numbers=[11,22,33,44,35,6,7]
-    sum=0;
-     for(i=0;i<numbers.length;i++){
-        addition(numbers[i]);//argument
-    }
-    function addition(a){
-        return sum=sum+a;
+    // numbers=[11,22,33,44,35,6,7]
+    // sum=0;
+    //  for(i=0;i<numbers.length;i++){
+    //     addition(numbers[i]);//argument
+    // }
+    // function addition(a){
+    //     return sum=sum+a;
+        
+    // }
+
+   
+    // console.log(sum)
+    // int a=0;
+    //do while loop while loop 
+
+    // for loop. we have to give starting point and ending point and increment/decrement 
+     count=0;
+    while(true){
+        number=Number(prompt("enter the number"));
+       
+        winner=13;
+        if(count==3){
+             console.log("you looser!")
+            break;
+        }
+        
+        if(number==winner){
+            console.log("you won!")
+            break;
+        }else if(number>winner){
+            console.log("guess less")
+            count++;
+        }
+        else if(winner>number){
+            console.log("guess high")
+            count++;
+        }
         
     }
 
-   
-    console.log(sum)
+    // number=prompt("enter the number");
+    // console.log(typeof(number))
+
     </script>
   </body>
 </html>
