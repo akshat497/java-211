@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -28,16 +34,19 @@
         color: aliceblue;
         padding: 5px;
       }
-      .uptBtn{
-         background-color: skyblue;
+      .uptBtn {
+        background-color: skyblue;
         color: aliceblue;
         padding: 5px;
-
       }
-      .buttons{
-        
+      .buttons {
         display: flex;
         justify-content: space-between;
+      }
+      .alert {
+        opacity: 0;
+        display: none;
+        transition: all 1s ease-in-out;
       }
     </style>
   </head>
@@ -46,9 +55,10 @@
       Name:-<input type="text" placeholder="enter a name" id="name" /> Email:-
       <input type="text" placeholder="enter a email" id="email" /> Phone:-
       <input type="text" placeholder="enter a phone number" id="phone" />
-      Age:-<input type="text" placeholder="enter age" id="age" />
+      Age:-<input type="number" placeholder="enter age" id="age" />
       <button onclick="addData()">Submit</button>
     </div>
+    <div class="alert alert-danger" role="alert"></div>
     <table border>
       <thead>
         <tr>
@@ -79,8 +89,49 @@
       var Useremail = document.getElementById("email");
       var Userphone = document.getElementById("phone");
       var Userage = document.getElementById("age");
+
       var students = [];
+
+      function showAlert(message) {
+        var alertBox = document.getElementsByClassName("alert");
+        console.log(alertBox);
+        alertBox[0].style.display = "block";
+        alertBox[0].style.opacity = 1;
+        alertBox[0].innerText = message;
+        setTimeout(() => {
+          alertBox[0].style.display = "none";
+          alertBox[0].style.opacity = 0;
+        }, 3000);
+      }
       function addData() {
+        if (
+          Username.value.trim() == "" ||
+          Useremail.value.trim() == "" ||
+          Userphone.value.trim() == "" ||
+          Userage.value.trim() == ""
+        ) {
+          showAlert("Empty values are not allowed");
+          return;
+        }
+        let duplicatevalue = students.some(function (value, index) {
+          return value.email == Useremail.value;
+        });
+        if (duplicatevalue) {
+          showAlert("duplicate values are not allowed");
+          return;
+        }
+        let phoneLength = Userphone.value.length;
+        console.log(phoneLength);
+        if (phoneLength > 10) {
+          showAlert("Phone number length should be 10 digits!");
+          return;
+        }
+      let correctEmail= Useremail.value.includes("@")&&Useremail.value.includes(".");
+      if(!correctEmail){
+        showAlert("Email format is not correct");
+          return;
+      }
+
         // var tableRow=document.createElement("tr")
         // var name=document.createElement('td')
         // var email=document.createElement('td')
@@ -147,5 +198,20 @@
       //    console.log(students.splice(0,2))
       //    console.log(students.slice(0,3))
     </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
