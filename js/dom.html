@@ -124,14 +124,34 @@
         <button class="close-btn" onclick="closeModal()">Cancel</button>
       </div>
     </div>
-    <input type="search" id="searchBar" placeholder="Search by email" onchange="SearchEmail()">
+    <div class="modal" id="deleteModal">
+      <div class="modal-content">
+        <h2>Delete Student</h2>
+        <div id="divContent"></div>
+
+        <button
+          class="btn btn-danger"
+          onclick="deleteRow()"
+          id="ModalDeleteButton"
+        >
+          Delete
+        </button>
+        <button class="close-btn" onclick="closeDeleteModal()">Cancel</button>
+      </div>
+    </div>
+    <input
+      type="search"
+      id="searchBar"
+      placeholder="Search by email"
+      onkeydown="SearchEmail()"
+    />
     <table border>
       <thead>
         <tr>
           <th>Name</th>
           <th>Email</th>
           <th>Phone</th>
-          <th>Age</th>
+          <th>Age <p onclick="sortAge()" ondblclick="originalstate()">⇅</p></th>
           <th>Action</th>
         </tr>
       </thead>
@@ -139,13 +159,36 @@
     </table>
 
     <script>
-        
+      
       function openModal() {
         document.getElementById("updateModal").style.display = "flex";
+      }
+      function OpenDeleteModal(passedIndex) {
+        console.log(passedIndex);
+        let modalBody = document.getElementById("deleteModal");
+        let paragraph = document.getElementById("divContent");
+         let button = document.getElementById("ModalDeleteButton");
+
+        
+
+        let student = students.filter(function (value, index) {
+          return index == passedIndex;
+        });
+        console.log(student);
+        button.setAttribute("name",passedIndex)
+
+        paragraph.innerHTML = `Are you sure you want to delete <b>${student[0].name}</b>`;
+
+        modalBody.style.display = "flex";
+        console.log(paragraph)
       }
       function closeModal() {
         document.getElementById("updateModal").style.display = "none";
       }
+      function closeDeleteModal() {
+        document.getElementById("deleteModal").style.display = "none";
+      }
+
       //   function createBox() {
       //     let box = document.createElement("div");
       //     console.log(box);
@@ -237,13 +280,32 @@
         // tableRow.append(name,email,phone,age,dltBtn)
         // tbody.append(tableRow)
       }
-      function display() {
-        console.log(students);
+      function display(flag) {
+        console.log("inside display");
         tbody.innerHTML = "";
         let exists = JSON.parse(localStorage.getItem("students"));
-        if (exists.length == 0) {
+        if(flag=="searching" ||flag=="sorting")
+{
+    students.forEach(function (value, index) {
+          // tableRow.append(name,email,phone,age,dltBtn)
+          tbody.innerHTML += `<tr>
+                <td>${value.name}</td>
+                <td>${value.email}</td>
+                <td>${value.phone}</td>
+                <td>${value.age}</td>
+                <td class="buttons"><button class="dltBtn" onclick="OpenDeleteModal(${index})">Delete</button>  
+                     <button class="uptBtn" onclick="updateRow(${index})">Update</button></td>
+             
+                
+                
+                </tr>`;
+        });
+        return
+
+}        if (exists.length == 0) {
           localStorage.setItem("students", "");
         } else {
+            
           students = JSON.parse(localStorage.getItem("students"));
         }
 
@@ -254,7 +316,7 @@
                 <td>${value.email}</td>
                 <td>${value.phone}</td>
                 <td>${value.age}</td>
-                <td class="buttons"><button class="dltBtn" onclick="deleteRow(${index})">Delete</button>  
+                <td class="buttons"><button class="dltBtn" onclick="OpenDeleteModal(${index})">Delete</button>  
                      <button class="uptBtn" onclick="updateRow(${index})">Update</button></td>
              
                 
@@ -299,13 +361,16 @@
         display();
         closeModal();
       }
-      function deleteRow(index) {
-        console.log(index);
+      function deleteRow() {
+        let id=document.getElementById("ModalDeleteButton");
+        console.log(id.name)
+       
         let newArray = students.filter(function (value, ourIndex) {
-          return index != ourIndex;
+          return id.name != ourIndex;
         });
         students = newArray;
         localStorage.setItem("students", JSON.stringify(students));
+        closeDeleteModal()
         display();
       }
       //    students=["akshat","pankaj","akshat","zakir","anhay","deepanshu","satyam","ankit"];
@@ -319,15 +384,54 @@
 
       //    console.log(students.splice(0,2))
       //    console.log(students.slice(0,3))
-
-      function SearchEmail(){
-        let searchedtag=document.getElementById("searchBar");
-        let searchValue=searchedtag.value;
-       let result= students.filter(function(value,index){
-           return value.email.includes(searchValue)
-
-        })
+var deepCopy=students
+ var direction="asc"
+ function originalstate(){
+   
+    display()
+ }
+        function sortAge(){
+            console.log(direction)
+            if(direction=="asc"){
+                let result=students.sort(function(value1,value2){
+               return value1.age-value2.age
+            })
+                console.log(result)
+            direction="desc"
+            students=result
+            display("sorting")
+            
+            }else{
+                let result=students.sort(function(value1,value2){
+                return value2.age-value1.age
+            })
+            console.log(result)
+            direction="asc"
+             students=result
+             display("sorting")
+            }
+        
+            
+            
+        }
+      function SearchEmail() {
+        let searchedtag = document.getElementById("searchBar");
+        let searchValue = searchedtag.value;
+        
+        let result = deepCopy.filter(function (value, index) {
+          return value.email.includes(searchValue) || value.name.includes(searchValue) ||value.phone.includes(searchValue) || value.age.includes(searchValue)
+        });
         console.log(result)
+
+        if(searchValue.trim()==""&&searchValue.length==0){
+            console.log("matched")
+            students=deepCopy;
+            display("searching")
+        }else{
+                console.log("matchedd")
+            students=result;
+            display("searching")
+        }
       }
     </script>
     <script
