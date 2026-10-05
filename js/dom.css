@@ -1,0 +1,104 @@
+
+      .box {
+        height: 100px;
+        width: 100px;
+        border: 2px solid black;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        padding: 1%;
+        gap: 10px;
+        background-color: rgb(201, 196, 196);
+        border-radius: 20px;
+      }
+      table {
+        width: 95vw;
+        margin: 1%;
+        border-color: red;
+      }
+      .dltBtn {
+        background-color: red;
+        color: aliceblue;
+        padding: 5px;
+      }
+      .uptBtn {
+        background-color: skyblue;
+        color: aliceblue;
+        padding: 5px;
+      }
+      .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+      }
+      .alert {
+        opacity: 0;
+        display: none;
+        transition: all 1s ease-in-out;
+      }
+      /* Update Button */
+      .update-btn {
+        padding: 10px 20px;
+        background-color: #0d6efd;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      } /* Modal Background */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+      } /* Modal Box */
+      .modal-content {
+        background-color: white;
+        width: 400px;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      }
+      .modal-content h2 {
+        margin-top: 0;
+      }
+      .modal-content input {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0 15px;
+        box-sizing: border-box;
+      }
+      .save-btn {
+        padding: 10px 20px;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .close-btn {
+        padding: 10px 20px;
+        background-color: gray;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .asgBtn{
+        background-color: #0d6efd;
+        color: aliceblue;
+      }
+      #action{
+           display: flex;
+    justify-content: center;
+    align-items: center;
+      }
+     
+  tr:hover{
+    background-color: red;
+  }
