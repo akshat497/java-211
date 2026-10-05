@@ -1,8 +1,3 @@
-
-
-
-
-
 function openModal() {
   document.getElementById("updateModal").style.display = "flex";
 }
@@ -47,7 +42,7 @@ var Username = document.getElementById("name");
 var Useremail = document.getElementById("email");
 var Userphone = document.getElementById("phone");
 var Userage = document.getElementById("age");
-var Userid=document.getElementById("idSort");
+var Userid = document.getElementById("idSort");
 
 var students = [];
 
@@ -63,20 +58,20 @@ function showAlert(message) {
   }, 3000);
 }
 function addData() {
-    let idName=Username.value
-    let phoneId=Userphone.value
-    console.log(idName)
-   let codeName= idName.slice(0,2)
-   let codePhone= phoneId.slice(0,4)
-   console.log( `${codeName}-${codePhone}-${Date.now()}`)
-    
-    Userid.value = `${codeName}-${codePhone}-${Date.now()}`;
+  let idName = Username.value;
+  let phoneId = Userphone.value;
+  console.log(idName);
+  let codeName = idName.slice(0, 2);
+  let codePhone = phoneId.slice(0, 4);
+  console.log(`${codeName}-${codePhone}-${Date.now()}`);
+
+  Userid.value = `${codeName}-${codePhone}-${Date.now()}`;
   if (
     Username.value.trim() == "" ||
     Useremail.value.trim() == "" ||
     Userphone.value.trim() == "" ||
-    Userage.value.trim() == ""||
-    Userid.value.trim()==""
+    Userage.value.trim() == "" ||
+    Userid.value.trim() == ""
   ) {
     showAlert("Empty values are not allowed");
     return;
@@ -118,7 +113,7 @@ function addData() {
   // age.innerText=Userage.value;
   tbody.innerHTML = "";
   student = {
-    id:Userid.value,
+    id: Userid.value,
     name: Username.value,
     email: Useremail.value,
     phone: Userphone.value,
@@ -252,7 +247,7 @@ function sortColumn(column) {
         ? value1[column].localeCompare(value2[column])
         : value1[column] - value2[column];
     });
-   
+
     direction = "desc";
     students = result;
     display("sorting");
@@ -262,7 +257,7 @@ function sortColumn(column) {
         ? value2[column].localeCompare(value1[column])
         : value2[column] - value1[column];
     });
-  
+
     direction = "asc";
     students = result;
     display("sorting");
