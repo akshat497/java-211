@@ -34,6 +34,22 @@
         <button class="close-btn" onclick="closeModal()">Cancel</button>
       </div>
     </div>
+     <div class="modal" id="AssignModal">
+      <div class="modal-content">
+        <h2>Assign Book</h2>
+        <select id="bookSelect">
+          <option value="">Select a book</option>
+        </select>
+        <button
+          class="btn btn-info"
+          onclick="assignBook()"
+          id="ModalDeleteButton"
+        >
+          Assign
+        </button>
+        <button class="close-btn" onclick="closeDeleteModal()">Cancel</button>
+      </div>
+    </div>
     <div class="modal" id="deleteModal">
       <div class="modal-content">
         <h2>Delete Student</h2>
@@ -49,14 +65,23 @@
         <button class="close-btn" onclick="closeDeleteModal()">Cancel</button>
       </div>
     </div>
-    <input
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+             
+      <td>
+        <input
       type="search"
       id="searchBar"
       placeholder="Search by email"
       onkeydown="SearchEmail()"
-    />
-    <table class="table table-striped">
-      <thead>
+    /></td>
+    </tr>
         <tr id="headers">
           <th>Title<lable id="nameSort" onclick="sortColumn('name')" ondblclick="originalstate()" >⇅</lable></th>
           <th>Author<lable id="emailSort" onclick="sortColumn('email')" ondblclick="originalstate()">⇅</lable></th>

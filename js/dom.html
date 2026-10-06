@@ -10,17 +10,95 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-  <link href="./dom.css" rel="stylesheet"/>
+    <link href="./dom.css" rel="stylesheet" />
   </head>
   <body>
-    <div>
-      Name:-<input type="text" placeholder="enter a name" id="name" /> Email:-
-      <input type="text" placeholder="enter a email" id="email" /> Phone:-
-      <input type="text" placeholder="enter a phone number" id="phone" />
-      Age:-<input type="number" placeholder="enter age" id="age" />
-      <button onclick="addData()">Submit</button>
+    <div class="container">
+      <div>
+        Name:-<input type="text" placeholder="enter a name" id="name" /> Email:-
+        <input type="text" placeholder="enter a email" id="email" /> Phone:-
+        <input type="text" placeholder="enter a phone number" id="phone" />
+        Age:-<input type="number" placeholder="enter age" id="age" />
+        <button onclick="addData()">Submit</button>
+      </div>
+
+      <div>
+        <div class="alert alert-danger" role="alert"></div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <button class="btn btn-danger " id="multiselect" onclick="deleteSelectedRows()">
+                 
+                
+                </button>
+              </td>
+              <td>
+                <input
+                  type="search"
+                  id="searchBar"
+                  placeholder="Search by email"
+                  onkeydown="SearchEmail()"
+                />
+              </td>
+            </tr>
+            <tr id="headers">
+              <th></th>
+              <th>
+                Id<lable
+                  id="idSort"
+                  onclick="sortColumn('id')"
+                  ondblclick="originalstate()"
+                  >⇅</lable
+                >
+              </th>
+
+              <th>
+                Name<lable
+                  id="nameSort"
+                  onclick="sortColumn('name')"
+                  ondblclick="originalstate()"
+                  >⇅</lable
+                >
+              </th>
+              <th>
+                Email<lable
+                  id="emailSort"
+                  onclick="sortColumn('email')"
+                  ondblclick="originalstate()"
+                  >⇅</lable
+                >
+              </th>
+              <th>
+                Phone<lable
+                  id="PhoneSort"
+                  onclick="sortColumn('phone')"
+                  ondblclick="originalstate()"
+                  >⇅</lable
+                >
+              </th>
+              <th>
+                Age
+                <lable
+                  id="ageSort"
+                  onclick="sortColumn('age')"
+                  ondblclick="originalstate()"
+                  >⇅</lable
+                >
+              </th>
+              <th id="action">Action</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
     </div>
-    <div class="alert alert-danger" role="alert"></div>
+    
     <div class="modal" id="updateModal">
       <div class="modal-content">
         <h2>Update Student</h2>
@@ -49,27 +127,22 @@
         <button class="close-btn" onclick="closeDeleteModal()">Cancel</button>
       </div>
     </div>
-    <input
-      type="search"
-      id="searchBar"
-      placeholder="Search by email"
-      onkeydown="SearchEmail()"
-    />
-    <table class="table table-striped">
-      <thead>
-        <tr id="headers">
-             <th>Id<lable id="idSort" onclick="sortColumn('id')" ondblclick="originalstate()" >⇅</lable></th>
-         
-          <th>Name<lable id="nameSort" onclick="sortColumn('name')" ondblclick="originalstate()" >⇅</lable></th>
-          <th>Email<lable id="emailSort" onclick="sortColumn('email')" ondblclick="originalstate()">⇅</lable></th>
-          <th>Phone<lable id="PhoneSort" onclick="sortColumn('phone')" ondblclick="originalstate()">⇅</lable></th>
-          <th>Age <lable id="ageSort" onclick="sortColumn('age')" ondblclick="originalstate()">⇅</lable></th>
-          <th id="action">Action</th>
-        </tr>
-      </thead>
-      <tbody id="tbody"></tbody>
-    </table>
-
+   <div class="modal" id="AssignModal">
+      <div class="modal-content">
+        <h2>Assign Book</h2>
+        <select id="bookSelect">
+          <option value="">Select a book</option>
+        </select>
+        <button
+          class="btn btn-info"
+          onclick="assignBook()"
+          id="ModalAssignButton"
+        >
+          Assign
+        </button>
+        <button class="close-btn" onclick="closeDeleteModal()">Cancel</button>
+      </div>
+    </div>
     <script src="./dom.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
