@@ -32,6 +32,7 @@
               <td></td>
               <td></td>
               <td></td>
+                <td></td>
               <td>
                 <button class="btn btn-danger " id="multiselect" onclick="deleteSelectedRows()">
                  
@@ -91,6 +92,11 @@
                   >⇅</lable
                 >
               </th>
+              <th>Books<lable
+                  id="nameSort"
+                  onclick="sortColumn('name')"
+                  ondblclick="originalstate()"
+                  >⇅</lable</th>
               <th id="action">Action</th>
             </tr>
           </thead>
@@ -109,7 +115,7 @@
         <button class="save-btn" onclick="saveChanges()" id="ModalSaveButton">
           Save Changes
         </button>
-        <button class="close-btn" onclick="closeModal()">Cancel</button>
+        <button class="close-btn" onclick="closeModal('update')">Cancel</button>
       </div>
     </div>
     <div class="modal" id="deleteModal">
@@ -124,7 +130,7 @@
         >
           Delete
         </button>
-        <button class="close-btn" onclick="closeDeleteModal()">Cancel</button>
+        <button class="close-btn" onclick="closeModal('delete')">Cancel</button>
       </div>
     </div>
    <div class="modal" id="AssignModal">
@@ -140,9 +146,62 @@
         >
           Assign
         </button>
-        <button class="close-btn" onclick="closeDeleteModal()">Cancel</button>
+        <button class="close-btn" onclick="closeModal('assign')">Cancel</button>
       </div>
     </div>
+    <div id="AssignedBooksModal" class="assigned-modal">
+  <div class="assigned-modal-content">
+
+    <div class="assigned-modal-header">
+      <div>
+        <h2>Assigned Books</h2>
+        <p id="assignedBooksSubtitle">Books assigned to student</p>
+      </div>
+
+      <button class="close-modal-btn" onclick="closeAssignedBooksModal()">
+        &times;
+      </button>
+    </div>
+
+    <div class="assigned-books-summary">
+      <div>
+        <span>Total Assigned</span>
+        <h3 id="totalAssignedBooks">0</h3>
+      </div>
+      <div>
+        <span>Student</span>
+        <h3 id="assignedStudentName">Student</h3>
+      </div>
+    </div>
+
+    <div class="assigned-books-table-wrapper">
+      <table class="assigned-books-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Book Details</th>
+            <th>Book ID</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="assignedBooksTableBody"></tbody>
+      </table>
+    </div>
+
+    <div id="noAssignedBooks" class="no-assigned-books">
+      <div class="empty-book-icon">📚</div>
+      <h3>No Books Assigned</h3>
+      <p>This student doesn't have any books assigned yet.</p>
+    </div>
+
+    <div class="assigned-modal-footer">
+      <button class="modal-close-btn" onclick="closeAssignedBooksModal()">
+        Close
+      </button>
+    </div>
+
+  </div>
+</div>
     <script src="./dom.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

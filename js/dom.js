@@ -1,231 +1,229 @@
+function saveBooks() {
+  let books = [
+    {
+      id: 1,
+      title: "The Great Gatsby",
+      author: "F. Scott Fitzgerald",
+      category: "Fiction",
+      isbn: "9780743273565",
+      publisher: "Scribner",
+      year: 1925,
+      quantity: 5,
+      available: 5,
+    },
+    {
+      id: 2,
+      title: "To Kill a Mockingbird",
+      author: "Harper Lee",
+      category: "Fiction",
+      isbn: "9780061120084",
+      publisher: "Harper Perennial",
+      year: 1960,
+      quantity: 6,
+      available: 6,
+    },
+    {
+      id: 3,
+      title: "1984",
+      author: "George Orwell",
+      category: "Dystopian",
+      isbn: "9780451524935",
+      publisher: "Signet Classics",
+      year: 1949,
+      quantity: 8,
+      available: 8,
+    },
+    {
+      id: 4,
+      title: "Animal Farm",
+      author: "George Orwell",
+      category: "Political Fiction",
+      isbn: "9780451526342",
+      publisher: "Signet Classics",
+      year: 1945,
+      quantity: 7,
+      available: 7,
+    },
+    {
+      id: 5,
+      title: "The Alchemist",
+      author: "Paulo Coelho",
+      category: "Adventure",
+      isbn: "9780062315007",
+      publisher: "HarperOne",
+      year: 1988,
+      quantity: 10,
+      available: 10,
+    },
+    {
+      id: 6,
+      title: "Harry Potter and the Philosopher's Stone",
+      author: "J. K. Rowling",
+      category: "Fantasy",
+      isbn: "9780747532699",
+      publisher: "Bloomsbury",
+      year: 1997,
+      quantity: 12,
+      available: 12,
+    },
+    {
+      id: 7,
+      title: "The Hobbit",
+      author: "J. R. R. Tolkien",
+      category: "Fantasy",
+      isbn: "9780547928227",
+      publisher: "Mariner Books",
+      year: 1937,
+      quantity: 6,
+      available: 6,
+    },
+    {
+      id: 8,
+      title: "Pride and Prejudice",
+      author: "Jane Austen",
+      category: "Romance",
+      isbn: "9780141439518",
+      publisher: "Penguin Classics",
+      year: 1813,
+      quantity: 5,
+      available: 5,
+    },
+    {
+      id: 9,
+      title: "The Catcher in the Rye",
+      author: "J. D. Salinger",
+      category: "Fiction",
+      isbn: "9780316769488",
+      publisher: "Little, Brown and Company",
+      year: 1951,
+      quantity: 4,
+      available: 4,
+    },
+    {
+      id: 10,
+      title: "Atomic Habits",
+      author: "James Clear",
+      category: "Self Help",
+      isbn: "9780735211292",
+      publisher: "Avery",
+      year: 2018,
+      quantity: 10,
+      available: 10,
+    },
+    {
+      id: 11,
+      title: "Rich Dad Poor Dad",
+      author: "Robert T. Kiyosaki",
+      category: "Finance",
+      isbn: "9781612681139",
+      publisher: "Plata Publishing",
+      year: 1997,
+      quantity: 8,
+      available: 8,
+    },
+    {
+      id: 12,
+      title: "The Psychology of Money",
+      author: "Morgan Housel",
+      category: "Finance",
+      isbn: "9780857197689",
+      publisher: "Harriman House",
+      year: 2020,
+      quantity: 7,
+      available: 7,
+    },
+    {
+      id: 13,
+      title: "Think and Grow Rich",
+      author: "Napoleon Hill",
+      category: "Self Help",
+      isbn: "9781585424337",
+      publisher: "TarcherPerigee",
+      year: 1937,
+      quantity: 6,
+      available: 6,
+    },
+    {
+      id: 14,
+      title: "Deep Work",
+      author: "Cal Newport",
+      category: "Productivity",
+      isbn: "9781455586691",
+      publisher: "Grand Central Publishing",
+      year: 2016,
+      quantity: 5,
+      available: 5,
+    },
+    {
+      id: 15,
+      title: "Clean Code",
+      author: "Robert C. Martin",
+      category: "Programming",
+      isbn: "9780132350884",
+      publisher: "Prentice Hall",
+      year: 2008,
+      quantity: 6,
+      available: 6,
+    },
+    {
+      id: 16,
+      title: "The Pragmatic Programmer",
+      author: "Andrew Hunt and David Thomas",
+      category: "Programming",
+      isbn: "9780135957059",
+      publisher: "Addison-Wesley",
+      year: 1999,
+      quantity: 5,
+      available: 5,
+    },
+    {
+      id: 17,
+      title: "Introduction to Algorithms",
+      author: "Thomas H. Cormen",
+      category: "Computer Science",
+      isbn: "9780262046305",
+      publisher: "MIT Press",
+      year: 1990,
+      quantity: 4,
+      available: 4,
+    },
+    {
+      id: 18,
+      title: "Python Crash Course",
+      author: "Eric Matthes",
+      category: "Programming",
+      isbn: "9781593279288",
+      publisher: "No Starch Press",
+      year: 2015,
+      quantity: 8,
+      available: 8,
+    },
+    {
+      id: 19,
+      title: "Data Science from Scratch",
+      author: "Joel Grus",
+      category: "Data Science",
+      isbn: "9781492041139",
+      publisher: "O'Reilly Media",
+      year: 2019,
+      quantity: 5,
+      available: 5,
+    },
+    {
+      id: 20,
+      title: "The Power of Habit",
+      author: "Charles Duhigg",
+      category: "Self Help",
+      isbn: "9780812981605",
+      publisher: "Random House",
+      year: 2012,
+      quantity: 7,
+      available: 7,
+    },
+  ];
 
-function saveBooks(
-){
-  let books=  [
-  {
-    "id": 1,
-    "title": "The Great Gatsby",
-    "author": "F. Scott Fitzgerald",
-    "category": "Fiction",
-    "isbn": "9780743273565",
-    "publisher": "Scribner",
-    "year": 1925,
-    "quantity": 5,
-    "available": 5
-  },
-  {
-    "id": 2,
-    "title": "To Kill a Mockingbird",
-    "author": "Harper Lee",
-    "category": "Fiction",
-    "isbn": "9780061120084",
-    "publisher": "Harper Perennial",
-    "year": 1960,
-    "quantity": 6,
-    "available": 6
-  },
-  {
-    "id": 3,
-    "title": "1984",
-    "author": "George Orwell",
-    "category": "Dystopian",
-    "isbn": "9780451524935",
-    "publisher": "Signet Classics",
-    "year": 1949,
-    "quantity": 8,
-    "available": 8
-  },
-  {
-    "id": 4,
-    "title": "Animal Farm",
-    "author": "George Orwell",
-    "category": "Political Fiction",
-    "isbn": "9780451526342",
-    "publisher": "Signet Classics",
-    "year": 1945,
-    "quantity": 7,
-    "available": 7
-  },
-  {
-    "id": 5,
-    "title": "The Alchemist",
-    "author": "Paulo Coelho",
-    "category": "Adventure",
-    "isbn": "9780062315007",
-    "publisher": "HarperOne",
-    "year": 1988,
-    "quantity": 10,
-    "available": 10
-  },
-  {
-    "id": 6,
-    "title": "Harry Potter and the Philosopher's Stone",
-    "author": "J. K. Rowling",
-    "category": "Fantasy",
-    "isbn": "9780747532699",
-    "publisher": "Bloomsbury",
-    "year": 1997,
-    "quantity": 12,
-    "available": 12
-  },
-  {
-    "id": 7,
-    "title": "The Hobbit",
-    "author": "J. R. R. Tolkien",
-    "category": "Fantasy",
-    "isbn": "9780547928227",
-    "publisher": "Mariner Books",
-    "year": 1937,
-    "quantity": 6,
-    "available": 6
-  },
-  {
-    "id": 8,
-    "title": "Pride and Prejudice",
-    "author": "Jane Austen",
-    "category": "Romance",
-    "isbn": "9780141439518",
-    "publisher": "Penguin Classics",
-    "year": 1813,
-    "quantity": 5,
-    "available": 5
-  },
-  {
-    "id": 9,
-    "title": "The Catcher in the Rye",
-    "author": "J. D. Salinger",
-    "category": "Fiction",
-    "isbn": "9780316769488",
-    "publisher": "Little, Brown and Company",
-    "year": 1951,
-    "quantity": 4,
-    "available": 4
-  },
-  {
-    "id": 10,
-    "title": "Atomic Habits",
-    "author": "James Clear",
-    "category": "Self Help",
-    "isbn": "9780735211292",
-    "publisher": "Avery",
-    "year": 2018,
-    "quantity": 10,
-    "available": 10
-  },
-  {
-    "id": 11,
-    "title": "Rich Dad Poor Dad",
-    "author": "Robert T. Kiyosaki",
-    "category": "Finance",
-    "isbn": "9781612681139",
-    "publisher": "Plata Publishing",
-    "year": 1997,
-    "quantity": 8,
-    "available": 8
-  },
-  {
-    "id": 12,
-    "title": "The Psychology of Money",
-    "author": "Morgan Housel",
-    "category": "Finance",
-    "isbn": "9780857197689",
-    "publisher": "Harriman House",
-    "year": 2020,
-    "quantity": 7,
-    "available": 7
-  },
-  {
-    "id": 13,
-    "title": "Think and Grow Rich",
-    "author": "Napoleon Hill",
-    "category": "Self Help",
-    "isbn": "9781585424337",
-    "publisher": "TarcherPerigee",
-    "year": 1937,
-    "quantity": 6,
-    "available": 6
-  },
-  {
-    "id": 14,
-    "title": "Deep Work",
-    "author": "Cal Newport",
-    "category": "Productivity",
-    "isbn": "9781455586691",
-    "publisher": "Grand Central Publishing",
-    "year": 2016,
-    "quantity": 5,
-    "available": 5
-  },
-  {
-    "id": 15,
-    "title": "Clean Code",
-    "author": "Robert C. Martin",
-    "category": "Programming",
-    "isbn": "9780132350884",
-    "publisher": "Prentice Hall",
-    "year": 2008,
-    "quantity": 6,
-    "available": 6
-  },
-  {
-    "id": 16,
-    "title": "The Pragmatic Programmer",
-    "author": "Andrew Hunt and David Thomas",
-    "category": "Programming",
-    "isbn": "9780135957059",
-    "publisher": "Addison-Wesley",
-    "year": 1999,
-    "quantity": 5,
-    "available": 5
-  },
-  {
-    "id": 17,
-    "title": "Introduction to Algorithms",
-    "author": "Thomas H. Cormen",
-    "category": "Computer Science",
-    "isbn": "9780262046305",
-    "publisher": "MIT Press",
-    "year": 1990,
-    "quantity": 4,
-    "available": 4
-  },
-  {
-    "id": 18,
-    "title": "Python Crash Course",
-    "author": "Eric Matthes",
-    "category": "Programming",
-    "isbn": "9781593279288",
-    "publisher": "No Starch Press",
-    "year": 2015,
-    "quantity": 8,
-    "available": 8
-  },
-  {
-    "id": 19,
-    "title": "Data Science from Scratch",
-    "author": "Joel Grus",
-    "category": "Data Science",
-    "isbn": "9781492041139",
-    "publisher": "O'Reilly Media",
-    "year": 2019,
-    "quantity": 5,
-    "available": 5
-  },
-  {
-    "id": 20,
-    "title": "The Power of Habit",
-    "author": "Charles Duhigg",
-    "category": "Self Help",
-    "isbn": "9780812981605",
-    "publisher": "Random House",
-    "year": 2012,
-    "quantity": 7,
-    "available": 7
-  }
-]
-
-localStorage.setItem("books",JSON.stringify(books))
-};
+  localStorage.setItem("books", JSON.stringify(books));
+}
 saveBooks();
 
 let tbody = document.getElementById("tbody");
@@ -234,8 +232,6 @@ let Useremail = document.getElementById("email");
 let Userphone = document.getElementById("phone");
 let Userage = document.getElementById("age");
 let Userid = document.getElementById("idSort");
-
-
 
 let rowsToBeDeleted = [];
 function openModal() {
@@ -258,14 +254,20 @@ function OpenDeleteModal(passedIndex) {
   modalBody.style.display = "flex";
   console.log(paragraph);
 }
-function closeModal() {
-  document.getElementById("updateModal").style.display = "none";
-}
-function closeDeleteModal() {
-  document.getElementById("deleteModal").style.display = "none";
-}
 
-
+function closeModal(modal) {
+  switch (modal) {
+    case "update":
+      document.getElementById("updateModal").style.display = "none";
+      break;
+    case "delete":
+      document.getElementById("deleteModal").style.display = "none";
+      break;
+    case "assign":
+      document.getElementById("AssignModal").style.display = "none";
+      break;
+  }
+}
 
 function showAlert(message) {
   let alertBox = document.getElementsByClassName("alert");
@@ -341,6 +343,7 @@ function addData() {
     email: Useremail.value,
     phone: Userphone.value,
     age: Userage.value,
+    books: [],
   };
   students.push(student);
   localStorage.setItem("students", JSON.stringify(students));
@@ -356,7 +359,7 @@ function toggleRowSelection(checkbox, index) {
   if (checkbox.checked) {
     rowsToBeDeleted.push(index);
     if (rowsToBeDeleted.length > 0) {
-        document.getElementById("multiselect").innerHTML= `  <svg
+      document.getElementById("multiselect").innerHTML = `  <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="16"
@@ -381,7 +384,7 @@ function toggleRowSelection(checkbox, index) {
       rowsToBeDeleted.splice(rowIndex, 1);
     }
     if (rowsToBeDeleted.length > 0) {
-         document.getElementById("multiselect").innerHTML= `  <svg
+      document.getElementById("multiselect").innerHTML = `  <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="16"
@@ -428,6 +431,7 @@ function display(flag) {
                 <td>${value.email}</td>
                 <td>${value.phone}</td>
                 <td>${value.age}</td>
+                <td>${value.books.length || "None"}</td>
                 <td class="buttons">
                 <button class="dltBtn" onclick="OpenDeleteModal(${index})">Delete</button>  
                   <button class="asgBtn" onclick="OpenAssignModal(${index})">Assign</button>  
@@ -455,6 +459,7 @@ function display(flag) {
                 <td>${value.email}</td>
                 <td>${value.phone}</td>
                 <td>${value.age}</td>
+                       <td onclick="openAssignedBooksModal(${index})">${value?.books?.length || "None"}</td>
                 <td class="buttons"><button class="dltBtn" onclick="OpenDeleteModal(${index})">Delete</button>  
                 <button class="asgBtn" onclick="OpenAssignModal(${index})">Assign</button>  
                      <button class="uptBtn" onclick="updateRow(${index})">Update</button></td>
@@ -465,6 +470,58 @@ function display(flag) {
   });
 }
 display();
+function openAssignedBooksModal(passedIndex) {
+  let student = students[passedIndex];
+
+  if (!student) {
+    alert("Student not found");
+    return;
+  }
+
+  let assignedBooks = student.books || [];
+
+  let modal = document.getElementById("AssignedBooksModal");
+  let tableBody = document.getElementById("assignedBooksTableBody");
+  let noBooks = document.getElementById("noAssignedBooks");
+  let tableWrapper = document.querySelector(".assigned-books-table-wrapper");
+
+  // Show student details
+  document.getElementById("assignedStudentName").textContent = student.name;
+  document.getElementById("totalAssignedBooks").textContent =
+    assignedBooks.length;
+
+  document.getElementById("assignedBooksSubtitle").textContent =
+    `Books assigned to ${student.name}`;
+
+  // Clear previous student's books
+  tableBody.innerHTML = "";
+
+  if (assignedBooks.length === 0) {
+    tableWrapper.style.display = "none";
+    noBooks.style.display = "block";
+  } else {
+    tableWrapper.style.display = "block";
+    noBooks.style.display = "none";
+
+    assignedBooks.forEach(function (book, index) {
+      let row = document.createElement("tr");
+
+      row.innerHTML = `
+        <td>${index + 1}</td>
+        <td class="book-title-cell">${book.title || "Untitled Book"}</td>
+        <td class="book-id-cell">${book.id ?? "N/A"}</td>
+        <td><span class="book-status">Assigned</span></td>
+      `;
+
+      tableBody.appendChild(row);
+    });
+  }
+
+  modal.style.display = "flex";
+}
+function closeAssignedBooksModal() {
+  document.getElementById("AssignedBooksModal").style.display = "none";
+}
 function updateRow(passedIndex) {
   let row = students.filter(function (value, index) {
     return index == passedIndex;
@@ -510,7 +567,7 @@ function deleteRow() {
   });
   students = newArray;
   localStorage.setItem("students", JSON.stringify(students));
-  closeDeleteModal();
+  closeModal("delete");
   display();
 }
 //    students=["akshat","pankaj","akshat","zakir","anhay","deepanshu","satyam","ankit"];
@@ -561,7 +618,9 @@ function SearchEmail() {
       value.email.includes(searchValue) ||
       value.name.includes(searchValue) ||
       value.phone.includes(searchValue) ||
-      value.age.includes(searchValue)
+      value.age.includes(searchValue)||
+      value.id.includes(searchValue)
+   
     );
   });
   console.log(result);
@@ -582,28 +641,39 @@ function OpenAssignModal(passedIndex) {
   let modalBody = document.getElementById("AssignModal");
   let button = document.getElementById("ModalAssignButton");
   modalBody.style.display = "flex";
-  let select=document.getElementById("bookSelect");
-  select.innerHTML="";
-  let books=JSON.parse(localStorage.getItem("books"));
-  books.forEach(function(value,index){
-    select.innerHTML+=`<option value="${value.id}">${value.title}</option>`
-  })
-  button.addEventListener("click",function(){
-    let selectedBookId=select.value;
-    let selectedBook=books.filter(function(value,index){
-      return value.id==selectedBookId;
-    })
-    console.log(selectedBook);
-    if(selectedBook[0].available>0){
-      selectedBook[0].available-=1;
-      localStorage.setItem("books",JSON.stringify(books));
-      alert(`Book "${selectedBook[0].title}" assigned to ${students[passedIndex].name}`);
-      modalBody.style.display = "none";
-    }else{
-      alert(`Book "${selectedBook[0].title}" is not available`);
-    }
+  let select = document.getElementById("bookSelect");
+  select.innerHTML = "";
+  let books = JSON.parse(localStorage.getItem("books"));
+  books.forEach(function (value, index) {
+    select.innerHTML += `<option value="${value.id}">${value.title}</option>`;
   });
 
-  
+ button.onclick=function () {
+    let selectedBookId = select.value;
+    let selectedStudent = students[passedIndex];
+    let selectedBook = books.filter(function (value, index) {
+      return value.id == selectedBookId;
+    });
+    console.log(selectedBook);
+    if (selectedBook[0].available > 0) {
+      selectedBook[0].available -= 1;
+      localStorage.setItem("books", JSON.stringify(books));
+      let bookAlreadyAssigned = students[passedIndex].books.find(function (value, index) {
+        return value.id == selectedBookId;
+      })
+      if (bookAlreadyAssigned) {
+        alert(`Book "${selectedBook[0].title}" is already assigned to ${selectedStudent.name}`);
+        return;
+      }
+      students[passedIndex].books.push(selectedBook[0]);
 
+      localStorage.setItem("students", JSON.stringify(students));
+
+      alert(`Book "${selectedBook[0].title}" assigned to ${students[passedIndex].name}`);
+      modalBody.style.display = "none";
+      display();
+    } else {
+      alert(`Book "${selectedBook[0].title}" is not available`);
+    }
+  }
 }

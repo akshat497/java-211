@@ -121,3 +121,197 @@
     justify-content: center;
     align-items: center;
   }
+  .assigned-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.assigned-modal-content {
+  width: 100%;
+  max-width: 850px;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  padding: 28px;
+}
+
+.assigned-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.assigned-modal-header h2 {
+  margin: 0 0 6px;
+  color: #172033;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.assigned-modal-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.close-modal-btn {
+  border: none;
+  background: #f1f5f9;
+  color: #334155;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  font-size: 26px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.close-modal-btn:hover {
+  background: #e2e8f0;
+}
+
+.assigned-books-summary {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.assigned-books-summary > div {
+  flex: 1;
+  min-width: 0;
+  padding: 18px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.assigned-books-summary span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.assigned-books-summary h3 {
+  color: #0f172a;
+  font-size: 20px;
+  margin: 8px 0 0;
+  overflow-wrap: anywhere;
+}
+
+.assigned-books-table-wrapper {
+  overflow-x: auto;
+}
+
+.assigned-books-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.assigned-books-table th {
+  padding: 14px 12px;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.assigned-books-table td {
+  padding: 16px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+  font-size: 14px;
+}
+
+.assigned-books-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.book-title-cell {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.book-id-cell {
+  color: #64748b;
+  font-family: monospace;
+}
+
+.book-status {
+  display: inline-block;
+  padding: 5px 10px;
+  background: #dcfce7;
+  color: #166534;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.no-assigned-books {
+  display: none;
+  text-align: center;
+  padding: 45px 15px;
+}
+
+.empty-book-icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.no-assigned-books h3 {
+  margin: 0 0 8px;
+  color: #1e293b;
+}
+
+.no-assigned-books p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.assigned-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.modal-close-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 11px 22px;
+  background: #1e293b;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal-close-btn:hover {
+  background: #334155;
+}
+
+@media (max-width: 600px) {
+  .assigned-modal-content {
+    padding: 18px;
+  }
+
+  .assigned-modal-header h2 {
+    font-size: 20px;
+  }
+
+  .assigned-books-summary {
+    flex-direction: column;
+  }
+}
