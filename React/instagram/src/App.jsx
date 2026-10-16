@@ -6,6 +6,9 @@ import { Header } from "./Header";
 function App(){
 
 
-  return(<div> i am a app component </div>)
+  return(
+  <div> i am a app component
+  <img src="favicon.svg" />
+   </div>)
 }
 export default App;
